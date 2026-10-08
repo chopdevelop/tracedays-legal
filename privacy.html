@@ -27,37 +27,13 @@
   <div class="notice">This document is a substantive draft and has not yet been reviewed by a licensed attorney. It is provided for beta testing purposes and will be finalized before public App Store submission.</div>
 
   <h2>1. Overview and Our Core Commitment</h2>
-  <p>Tracedays is a private, on-device journaling app. Our foundational design principle is that your personal data never leaves your device under our control. We do not operate servers. We do not collect your data. We do not sell, share, or transmit your personal information to any third party.</p>
-  <p>This Privacy Policy describes what data Tracedays accesses on your device to provide its features, how that data is processed (entirely locally), and what rights you have.</p>
 
-  <h2>2. Data We Access But Do Not Collect</h2>
-  <p>Tracedays requests permission to access the following data on your device. This data is read locally to generate your journal entries. It is never transmitted to our servers because we do not operate servers. It is never shared with third parties.</p>
+  <p>Tracedays is a private journaling app that keeps your journal on your device. Tracedays has no servers, we do not collect your data, and we do not sell your personal information. Except for the weather and place-name lookups described in Section 3, which go directly from your device to Apple's Maps services and to Open-Meteo, and apart from backups and exports you direct to a location you choose (see Section 5), Tracedays does not send your data off your device, and we do not share your personal information with anyone. Separately, iOS may download your photos from iCloud Photos, sync backups you keep in a cloud folder you choose (such as iCloud Drive), and include the app's data in iCloud Backup if you use it.</p>
 
-  <h3>Health &amp; Activity Data (HealthKit)</h3>
-  <p>Tracedays requests access to step count, active energy, exercise minutes, heart rate, and other activity metrics you choose to share. This data is accessed locally, processed on your device to contribute to your journal entry, and never leaves your device under our control. Tracedays does not use HealthKit data for advertising, marketing, or any purpose other than generating your personal journal entries. Tracedays does not store HealthKit data in iCloud.</p>
+  <p>This Privacy Policy describes what data Tracedays accesses on your device to provide its features, which parts of it are sent to those two services, how the rest is processed (on your device), and what rights you have.</p>
 
-  <h3>Location Data</h3>
-  <p>Tracedays requests access to your precise location to identify meaningful places in your day (e.g., "spent the afternoon at Dolores Park"). Location data is processed entirely on-device. You will receive an explicit confirmation prompt before any location-derived place information appears in your journal. Tracedays does not maintain a history of your location on any server.</p>
+  <h2>2. What We Do Not Do</h2>
 
-  <h3>Photos</h3>
-  <p>Tracedays requests access to your photo library to identify photos taken during the day and include visual context in your journal entries. Photos are processed on-device. Photo content, thumbnails, and metadata are never transmitted externally.</p>
-
-  <h3>Calendar &amp; Reminders</h3>
-  <p>Tracedays requests access to your calendar events and reminders to provide context for your day (e.g., meetings attended, tasks completed). This data is read locally and never transmitted.</p>
-
-  <h3>Weather Data</h3>
-  <p>Tracedays retrieves current weather conditions using the Open-Meteo API, a free weather service that does not require account creation. The only data transmitted to Open-Meteo is your approximate location coordinates (latitude/longitude) to retrieve a weather forecast. Open-Meteo does not receive any other personal information. Open-Meteo's privacy policy is available at <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a>.</p>
-
-  <h2>3. AI-Generated Journal Entries and Apple's Foundation Models</h2>
-  <p>When you use Tracedays's AI journal generation feature, your day's aggregated data (health metrics, location summary, calendar events, photo context, and weather) is processed by Apple's Foundation Models framework to generate a narrative journal entry.</p>
-  <p><strong>On-Device Processing:</strong> For simpler requests, all AI inference occurs locally on your device using Apple's on-device Foundation Model. No data is transmitted anywhere.</p>
-  <p><strong>Apple Private Cloud Compute (PCC):</strong> For more complex journal generation, data may be sent to Apple's Private Cloud Compute infrastructure. Apple's PCC uses end-to-end encryption and hardware-isolated enclaves. Apple has stated that data processed through PCC is not stored after processing and is not accessible to Apple employees or third parties. This processing is governed by Apple's privacy policy, not ours.</p>
-  <p>We do not send your data to any AI provider other than through Apple's Foundation Models framework. We do not use OpenAI, Google Gemini (directly), Anthropic, or any other third-party AI API.</p>
-
-  <h2>4. Data Stored on Your Device</h2>
-  <p>All journal entries, preferences, and app data are stored locally on your device using SwiftData. This data is under your control. Tracedays does not back up your journal data to our servers. If you have iCloud Backup enabled on your device, your device backup (which may include app data) is governed by Apple's iCloud terms and privacy policy. We do not control or access iCloud backups.</p>
-
-  <h2>5. What We Do Not Do</h2>
   <ul>
     <li>We do not sell your personal information</li>
     <li>We do not share your personal information with advertisers</li>
@@ -67,27 +43,119 @@
     <li>We do not use crash reporting services that transmit personal data</li>
     <li>We do not embed third-party SDKs that collect data</li>
     <li>We do not maintain user accounts</li>
-    <li>We do not store any of your data on external servers</li>
+    <li>We do not store any of your data on servers we operate or control</li>
+    <li>Tracedays does not send your data over the internet, apart from the weather and place-name lookups described in Section 3, and backups and exports you direct to a location you choose (see Section 5)</li>
   </ul>
 
+  <h2>3. Data We Access But Do Not Collect</h2>
+
+  <p>Tracedays requests permission to access the following data on your device. This data is read on your device to generate your journal entries. Except for the weather and place-name lookups described below, and apart from backups and exports you direct to a location you choose (see Section 5), it is not sent off your device. We do not receive it, because Tracedays has no servers.</p>
+
+  <h3>Health &amp; Activity Data (HealthKit)</h3>
+
+  <p>Tracedays requests access to step count, active energy, exercise minutes, heart rate, and other activity metrics you choose to share. This data is accessed locally, processed on your device to contribute to your journal entry, and never leaves your device under our control. Tracedays does not use HealthKit data for advertising, marketing, or any purpose other than generating your personal journal entries. Tracedays does not store HealthKit data in iCloud.</p>
+
+  <h3>Location Data</h3>
+
+  <p>Tracedays requests access to your location to suggest a nearby place for your journal (e.g., "Dolores Park"). To suggest a nearby place, Tracedays sends your current location to Apple's Maps services (a nearby-place search and, if that finds nothing, reverse geocoding), and when you search for a place by typing, what you type is sent to the same services. Apple handles this information under Apple's privacy policy. A suggested place is added to your journal only after you confirm it. A confirmed place is saved in that day's entry with its name and coordinates, so it is also included in your backups and exports. Tracedays also reads your location to get the weather, as described under Weather Data, whether or not the Location data source is turned on. Tracedays does not keep a history of your location on any server, because it has no servers.</p>
+
+  <h3>Photos</h3>
+
+  <p>Tracedays requests access to your photo library to find the photos taken during the day and show them in that day's entry. Tracedays does not send your photos or their thumbnails over the internet. If photos from the day have location information, Tracedays groups photos taken within about 150 meters of each other and sends the average position of each group (not the photos) to Apple's Maps services to find a place name. This happens whenever the Photos data source is turned on, even if the Location data source is turned off. Apple handles this information under Apple's privacy policy. Such a place is added to your journal only after you confirm it. Your entry stores references (Photos library identifiers) to the photos it shows, and those references are included in backups. Photos you add manually with "Add a photo" are saved as a link to your Photos library if Tracedays has full Photos access (those links are included in backups); otherwise a copy is saved in the app's own storage, and those copies are not included in backups. If a photo is stored in iCloud Photos, iOS may download it from iCloud when Tracedays needs to show it.</p>
+
+  <h3>Calendar &amp; Reminders</h3>
+
+  <p>Tracedays requests access to your calendar events and your reminders to provide context for your day. The titles and times of the day's calendar events are shown on the Today screen and saved in that day's journal entry, so they are also included in your backups and exports. Tracedays also shows your open (not yet completed) reminders, with their due dates, on the Today screen. Reminders are not saved in your journal entries, are not used to write them, and are not included in backups or exports. Tracedays does not send calendar or reminder data over the internet.</p>
+
+  <h3>Weather Data</h3>
+
+  <p>Tracedays retrieves current weather conditions using the Open-Meteo API, a free weather service that does not require account creation. To do this, Tracedays reads your device's location whenever the Weather data source is turned on and you have allowed location access, whether or not the Location data source is turned on. It sends Open-Meteo your latitude and longitude rounded to two decimal places (about 1 km), and Open-Meteo also receives your device's IP address as part of the internet request, plus the standard technical details any internet request carries (such as the app's name and version, the operating-system software version and your language setting). Tracedays does not send Open-Meteo your name, your journal, or any account information (Tracedays has no accounts). Open-Meteo's privacy policy is available at <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a>.</p>
+
+  <h2>4. AI-Generated Journal Entries and Apple's Foundation Models</h2>
+
+  <p>When you use Tracedays's AI journal generation feature, a summary of your day (activity totals, weather, the names of places you confirmed, the titles of your calendar events, the note you wrote, and the day of the week) is given to Apple's on-device Foundation Models framework to generate a narrative journal entry. Photos and reminders are not part of that summary. This feature can be turned on or off in Settings, and defaults to on.</p>
+
+  <p><strong>On-Device Processing:</strong> All AI inference occurs on your device using Apple's on-device Foundation Model. Tracedays does not send this summary or the generated text to anyone, and it does not use Apple's Private Cloud Compute or any other off-device processing for journal generation. If the on-device model is unavailable, Tracedays falls back to its own template-based writer, which also runs on your device.</p>
+
+  <p>Tracedays does not send your data to any AI service. We do not use OpenAI, Google Gemini, Anthropic, or any other third-party AI API.</p>
+
+  <h2>5. Data Stored on Your Device</h2>
+
+  <p>Your journal entries and app data are stored on your device in the app's database, and your preferences in the app's settings storage. This data is under your control. Tracedays does not back up your journal data to servers of ours, because we have none. If you have iCloud Backup enabled on your device, your device backup (which may include app data) is governed by Apple's iCloud terms and privacy policy. We do not control or access iCloud backups.</p>
+  <h3>Backups — automatic safety copies</h3>
+  <ul>
+    <li><strong>What they are:</strong> automatic safety copies of your journal, so you can get it back if the app breaks or is deleted.</li>
+    <li><strong>When they are made:</strong> up to one a day, when your journal has changed and the app goes to the background; and once right away when you choose a backup folder.</li>
+    <li><strong>Where they are kept:</strong> on your device in the Files app under Tracedays &gt; Tracedays Backups. If you choose a backup folder — for example, a folder in iCloud Drive or another storage service available on your device — Tracedays also saves a copy of each backup there.</li>
+    <li><strong>How many:</strong> each installation of Tracedays keeps its own newest 7 backups (more are kept for a time after an app update or a recovery). Backup files made by earlier installations or other devices are not rotated or replaced and stay until you delete them (Delete All Data also clears the app's own backup folder of every backup file; see Section 7).</li>
+    <li><strong>What is inside:</strong> your journal entries as stored in the app, including your notes, headlines and summaries, place names and coordinates, calendar event titles and times, weather (including temperature, high and low, and wind), activity totals (steps, distance, active minutes), tags, and references to your photos (Photos library identifiers, or file names of copies the app saved) — but not the photo copies saved in the app's own storage.</li>
+    <li><strong>Protection:</strong> backup files are scrambled so they are not readable at a glance, but they are not encrypted. Anyone who can open the Files app on your unlocked device, or who can access the folder you chose, may be able to read them.</li>
+    <li><strong>Your control:</strong> you can stop using a backup folder at any time in Settings &gt; Backup &amp; Restore.</li>
+  </ul>
+  <h3>Exports — a readable copy you make yourself</h3>
+  <ul>
+    <li><strong>What it is:</strong> a readable copy of your journal that you create yourself with Settings &gt; Backup &amp; Restore &gt; Export my data and send anywhere you choose (for example to Files, or to another person).</li>
+    <li><strong>It is not protected:</strong> an export is a plain, readable file, not scrambled; anyone who gets it can read it.</li>
+    <li><strong>How it is handled:</strong> Tracedays creates the export file in temporary storage and deletes it when the share sheet closes. Any copy you save or send is yours to manage. If the app lock is on, you must unlock before exporting.</li>
+  </ul>
+  <p><strong>Both backups and exports:</strong> Tracedays does not send them anywhere itself. If the folder you choose is in iCloud Drive, iOS uploads the backups there and may download them again when Tracedays needs to read them. Once a copy is in a location you choose, where it is stored and who can access it is governed by that location and its provider's terms and privacy policy, not by Tracedays.</p>
+  <p><strong>App lock.</strong> If you turn on the lock in Settings &gt; Privacy &amp; Security, Tracedays asks for Face ID, Touch ID or your device passcode when it opens and when it returns from the background, and exporting requires unlocking first. The lock controls access inside the app only: it does not protect backup files in the Files app or files you exported. If your device has no passcode, the lock does not ask for one.</p>
+
   <h2>6. Children's Privacy</h2>
+
   <p>Tracedays is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are under 13, please do not use this app. If you are a parent or guardian and believe your child has provided personal information through this app, please contact us and we will take steps to delete that information.</p>
 
   <h2>7. Your Rights and Control</h2>
-  <p>Because your data is stored locally on your device, you exercise full control:</p>
+
+  <p>Because your journal is stored on your device, you control it directly:</p>
   <ul>
     <li><strong>Access:</strong> Your data is in the app on your device</li>
-    <li><strong>Deletion:</strong> Delete the app to remove all locally stored data. Use in-app settings to delete individual journal entries</li>
+    <li><strong>Deletion:</strong> Use Settings &gt; Delete All Data. It deletes:
+      <ul>
+        <li>all your journal entries and any leftover places, calendar events and tags</li>
+        <li>all photo copies saved by the app (the app's whole manual-photos folder)</li>
+        <li>every backup file (.tdbackup) in the app's own Tracedays Backups folder, including files left there by earlier installations or other devices, and leftover temporary backup files</li>
+        <li>set-aside copies of damaged data and the recovery marker</li>
+        <li>leftover temporary export files</li>
+        <li>cached web responses (weather requests)</li>
+        <li>the app's record of your last backup</li>
+      </ul>
+      <p><strong>Optional:</strong> If you chose a backup folder, you can separately choose to delete this installation's backups in it. If that folder cannot be reached, the app tells you and deletes nothing there.</p>
+      <p><strong>It does not delete:</strong></p>
+      <ul>
+        <li>backups in a folder you chose (unless you choose that option, and then only this installation's: backups made there by earlier installations or other devices stay)</li>
+        <li>files you exported</li>
+        <li>copies you stored elsewhere</li>
+        <li>device backups such as iCloud Backup (managed by Apple)</li>
+        <li>links to photos in your Photos library (the photos themselves remain in Photos)</li>
+        <li>the app's preferences (such as your data-source switches, language and appearance settings)</li>
+        <li>some internal app settings, or data iOS keeps for the app</li>
+      </ul>
+      <p><strong>Afterwards:</strong></p>
+      <ul>
+        <li>Delete All Data makes the app forget its backup ID, so backups kept in your chosen folder are afterwards treated as an earlier installation's and are not overwritten or rotated by the app.</li>
+        <li>Your chosen backup folder stays selected, and Tracedays saves new backups there once your journal changes again (for example, when the next day's entry is created).</li>
+        <li>Deleted entries cannot be recovered in the app unless you restore from a backup you kept.</li>
+        <li>Tracedays does not take extra steps to securely erase deleted data, so traces of it may remain in the app's storage on your device for a time.</li>
+        <li>Deleting the app makes iOS remove the app's own storage from your device; it does not remove a backup folder you chose, files you exported, or device backups.</li>
+      </ul>
+      <p>You can also delete individual journal entries in the app.</p>
+    </li>
     <li><strong>Correction:</strong> Edit journal entries directly in the app</li>
-    <li><strong>Portability:</strong> Not currently available — Tracedays does not yet offer a data export feature.</li>
+    <li><strong>Portability:</strong> Use Settings &gt; Backup &amp; Restore &gt; Export my data to save a readable copy of your journal. The export is a plain, readable file: anyone who obtains it can read it, so keep it somewhere safe.</li>
   </ul>
-  <p>California residents: Because we do not collect or sell personal information, most CCPA rights do not activate in the traditional sense. Your data is on your device, not with us. If you have questions, contact us at the address below.</p>
+
+  <p>California residents: Tracedays does not meet the CCPA's statutory definition of a covered "business" (Cal. Civ. Code § 1798.140(d)). We have no server infrastructure, do not sell or share personal information, and do not come close to the revenue (over $26,625,000 as of 2026, adjusted for inflation) or data-volume (100,000 or more consumers or households annually) thresholds that trigger CCPA obligations. Because of this, most CCPA-specific procedural rights do not apply to Tracedays as a matter of law. In every case, your journal is stored on your device, not with us — you already have direct access to it without needing to invoke a statutory right. If you have questions, contact us at the address below.</p>
+
+  <p>Taiwan residents: Some data Tracedays accesses — specifically your health and activity data — is classified as sensitive personal data under Taiwan's Personal Data Protection Act (PDPA, Article 6, Paragraph 1, Subparagraph 6). We rely on your written consent, given electronically through the in-app "Data Sources" toggles (Settings &gt; Data Sources, and during onboarding), as the legal basis for accessing this data. You may withdraw this consent at any time by disabling the corresponding toggle, after which Tracedays will stop accessing that data source going forward. Place-name lookups for photo locations follow the Photos toggle, and weather lookups follow the Weather toggle, not the Location toggle (Weather reads your device's location whenever the Weather toggle is on and location access is allowed). Data already saved in your journal entries and backups stays there until you delete it (see Deletion above).</p>
 
   <h2>8. Changes to This Policy</h2>
+
   <p>We may update this Privacy Policy. If we make material changes, we will update the effective date and, where appropriate, notify you through the app. Continued use of Tracedays after changes constitutes acceptance of the updated policy.</p>
 
   <h2>9. Contact</h2>
-  <p>Tzu-Cheng Yu<br><a href="mailto:chopyu3391@gmail.com">chopyu3391@gmail.com</a></p>
+
+  <p>Tzu-Cheng Yu<br><a href="mailto:chopyu3391@gmail.com">chopyu3391@gmail.com</a><br><a href="https://chopdevelop.github.io/tracedays-legal/support.html">https://chopdevelop.github.io/tracedays-legal/support.html</a></p>
 
   <footer>
     &copy; 2026 Tzu-Cheng Yu. Tracedays. This is a draft pending attorney review.
